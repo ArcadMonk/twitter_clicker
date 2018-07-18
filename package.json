@@ -2,5 +2,6 @@
   "name": "twitter_clicker",
   "version": "0.0.1",
   "description": "stream de tweets ludique",
-  "dependencies": {}
+  "dependencies": {"socket.io": "^2.1.0"
+                  "twitter": "^1.7.1"}
 }
