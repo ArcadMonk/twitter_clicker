@@ -10,7 +10,7 @@
    $npm install pixi.js
 
 3) Creat a twitter app at : https://apps.twitter.com/
-   Feel-in your twitter app info in ./app.js  (key / token...)
+   Fill-in your twitter app info in ./app.js  (key / token...)
    
 4) $node ./app.js
 
