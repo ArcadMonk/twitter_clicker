@@ -1,1 +1,46 @@
+<!doctype html>
+<html lang="en">
+ 
+      <meta charset="UTF-8">
+<title>Twitter clicker</title>
 
+<!-- <canvas id="moncanvas" width="200" height="250"></canvas> -->
+<div id="tweets"></div>
+
+<script src="/socket.io/socket.io.js"></script>
+<!-- <script src="/index.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.0.0/pixi.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+<script>
+  var socket = io.connect('/'),
+      tweets = document.getElementById('tweets');
+  socket.on('tweet', function (data) {
+    tweets.innerHTML = tweets.innerHTML + '<br classe="tweet">' + data;
+  });
+  var renderer = PIXI.autoDetectRenderer(600, 250);
+        document.body.appendChild(renderer.view);
+        var stage = new PIXI.Container();
+        renderer.backgroundColor = 0xFFFFFF;
+
+        var tweetText = new PIXI.Text(tweets);
+        tweetText.x = 1;
+        tweetText.y = 90;
+        stage.addChild(tweetText);
+        renderer.render(stage);
+
+
+
+</script>
+
+<body>
+</body>
+</html>
